@@ -4,14 +4,12 @@
 #
 Name     : R-doParallel
 Version  : 1.0.14
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/doParallel_1.0.14.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/doParallel_1.0.14.tar.gz
 Summary  : Foreach Parallel Adaptor for the 'parallel' Package
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-foreach
-Requires: R-iterators
 BuildRequires : R-foreach
 BuildRequires : R-iterators
 BuildRequires : buildreq-R
@@ -27,11 +25,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537844567
+export SOURCE_DATE_EPOCH=1552806348
 
 %install
+export SOURCE_DATE_EPOCH=1552806348
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1537844567
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -66,8 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library doParallel|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  doParallel || :
 
 
 %files
@@ -100,5 +97,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/doParallel/help/paths.rds
 /usr/lib64/R/library/doParallel/html/00Index.html
 /usr/lib64/R/library/doParallel/html/R.css
+/usr/lib64/R/library/doParallel/tests/doRUnit.R
 /usr/lib64/R/library/doParallel/unitTests/options.R
 /usr/lib64/R/library/doParallel/unitTests/runTestSuite.sh
