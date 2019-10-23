@@ -4,7 +4,7 @@
 #
 Name     : R-doParallel
 Version  : 1.0.15
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/doParallel_1.0.15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/doParallel_1.0.15.tar.gz
 Summary  : Foreach Parallel Adaptor for the 'parallel' Package
@@ -15,6 +15,7 @@ Requires: R-iterators
 BuildRequires : R-foreach
 BuildRequires : R-iterators
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 the parallel package.
@@ -27,10 +28,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564764232
+export SOURCE_DATE_EPOCH=1571818976
 
 %install
-export SOURCE_DATE_EPOCH=1564764232
+export SOURCE_DATE_EPOCH=1571818976
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
