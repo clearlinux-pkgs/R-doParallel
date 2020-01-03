@@ -4,7 +4,7 @@
 #
 Name     : R-doParallel
 Version  : 1.0.15
-Release  : 26
+Release  : 27
 URL      : https://cran.r-project.org/src/contrib/doParallel_1.0.15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/doParallel_1.0.15.tar.gz
 Summary  : Foreach Parallel Adaptor for the 'parallel' Package
