@@ -4,7 +4,7 @@
 #
 Name     : R-doParallel
 Version  : 1.0.15
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/doParallel_1.0.15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/doParallel_1.0.15.tar.gz
 Summary  : Foreach Parallel Adaptor for the 'parallel' Package
@@ -15,28 +15,28 @@ Requires: R-iterators
 BuildRequires : R-foreach
 BuildRequires : R-iterators
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 the parallel package.
 
 %prep
 %setup -q -c -n doParallel
+cd %{_builddir}/doParallel
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571818976
+export SOURCE_DATE_EPOCH=1589568291
 
 %install
-export SOURCE_DATE_EPOCH=1571818976
+export SOURCE_DATE_EPOCH=1589568291
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
